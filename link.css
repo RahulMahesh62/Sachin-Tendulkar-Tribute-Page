@@ -2,91 +2,89 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-html,
-body {
-    height: 100%;
-    margin: 0;
-}
-
-#main {
-    overflow: auto;
+    box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: white;
+}
+
 nav {
-    float: right;
-    padding: 15px;
-    background-color: #111;
-    margin-left: 25rem;
+    margin: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #2d3436;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
     list-style-type: none;
 }
 
-ul li a {
+nav ul li a {
+    float: right;
+    text-decoration: none;
     font-weight: bold;
     color: royalblue;
     transition: all 0.5s;
     padding: 10px;
 }
 
-header nav ul li a:hover {
+nav ul li a:hover {
     text-decoration: none;
     color: red;
 }
 
 main {
+    margin: 0;
+    padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-#home {
-    padding-top: 0rem;
-}
-
 blockquote {
+    padding-top: 0;
+    width: 100%;
+    padding-bottom: 20px;
+    padding-right: 50px;
+    padding-left: 50px;
     font-size: large;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: italic;
     color: black;
 }
 
+#home{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 h1 {
-    margin-top: 4rem;
-    margin-left: 3rem;
+    
+    text-align: center;
     font-size: 40pt;
     color: indigo;
 }
 
-#row1 {
-    display: flex;
+#lcolumn {
+    float: left;
 }
 
-#lcolumn #rcolumn {
-    flex: 50%;
-}
-
-body {
-    font-family: 'Open Sans', sans-serif;
+#rcolumn{
+    padding-top: 200px;
+    margin-right: 50px;
 }
 
 #image {
-    width: ;
-    height: 80ch;
-}
-
-#fh3 {
-    text-align: center;
-    color: white;
+    padding-right: 50px;
+    padding-left: 50px;
+    width: 100%;
+    height: 70vh;
 }
 
 button {
@@ -95,42 +93,60 @@ button {
     margin-left: 11rem;
 }
 
+
+#homedf{
+    margin:0;
+    display: float;
+    height: 113vh;
+}
+
+#tribute-info{
+    margin-bottom: 0px;
+    height: 70vh;
+}
+
+#row2{
+    padding-top: 100px;
+}
+
 #rcolumn2 {
-    float: left;
-    width: 50%;
-    overflow: hidden;
-    margin-left: 1rem;
+    width: 100%;
+    margin: 0;
 }
 
 #lcolumn2 {
-    overflow: hidden;
+    display: none;
 }
 
-section {
-    padding: 20px;
-    margin: 15px auto 0;
+#worse {
+    margin-top: 0px;
+    padding-right: 30px;
+    padding-left: 30px;
+    text-align: justify;
+    justify-content: center;
+    width: auto;
+}
+
+#title{
+    text-align: center;
 }
 
 h3 {
-    align: center;
+    text-align: center;
     font-weight: bold;
 }
 
 footer {
-    padding: 5px;
-    background-color: #111;
-    margin-left: 0rem;
+    padding-top: 15px;
+    background-color: #2d3436;
+    padding-bottom: 15px;
+    margin: 0;
 }
+
 
 .scicon {
     width: 50px;
     height: 50px;
-}
-
-#img-div {
-    font-size: 12px;
-    margin: 0;
-    padding: 5px;
 }
 
 .bg-red {
@@ -146,98 +162,129 @@ h2 {
     text-align: center;
 }
 
-#follow {}
+#follow {
+    width: 100%;
+    margin: 0;
+    padding-top: 2px;
+    height: 14vh;
+}
+
+#follow h2{
+    padding-bottom: 10px;
+}
+
+footer{
+    margin-bottom: 0;
+    width: 100%;
+    padding: 10px 0px;
+}
+
+#fh3 {
+    text-align: center;
+    color: white;
+}
 
 .container1 {
     display: flex;
     max-width: 700px;
     margin: 0 auto;
+    margin-bottom: 0;
+}
+
+.container1 li{
+    padding-right: 25px;
 }
 
 @media only screen and (max-width: 600px) {
-    #menu {
+
+    nav{
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    #image{
+        width: 100%;
         display: block;
+        height: 50%;
     }
-    .nav-links {
-        position: absolute;
-        top: 9vh;
-        right: 0vh;
-        height: 91vh;
-        background-color: #1616db;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        width: 70vw;
-        margin: auto;
-        transform: translateX(100%);
-    }
-    .slide-into {
-        transform: translateX(0%);
-    }
-    .main {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 50% 50%;
-        grid-template-areas: "c" "i";
-        justify-content: flex-start;
-        align-items: center;
-    }
-    .cover-div {
-        grid-area: i;
-        margin-top: -8vh;
-        height: 70vh;
-        text-align: center;
-    }
-    #cover-image {
-        height: 70vh;
-    }
-    #header {
-        width: 100%;
-        grid-area: c;
+
+    #image1{
         height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        margin: auto;
-        margin-top: 8vh;
-        align-items: center;
+        width: 100%;
     }
-    #down_arrow {
-        position: absolute;
-        display: none;
+
+    #rcolumn{
+        display: block;
+        height: 100vh;
+        width: 100%;
     }
-    #title {
-        line-height: auto;
-        font-size: 12vw;
-        font-weight: 700;
+
+    #rcolumn2{
+            display: block;
+            text-align: center;
+            width: 100%;
+            padding-bottom: 40px;
+    }
+
+    #tribute-info{
+        margin: 0;
+        height: 205vh;
+    }
+
+    #worse {
+        margin-top: 0px;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: justify;
+        justify-content: center;
+        width: auto;
+    }
+
+    #homedf{
+        margin: 0;
+        height: 130vh;
+    }
+
+    #lcolumn2 {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+
+    p {
+        text-align: justify;
+        width: auto;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    #follow{
+        width: 100%;
         margin-bottom: 0;
-        color: #110e16;
     }
-    #tagline {
-        margin-top: 1%;
-        font-size: 6vw;
-        font-weight: 600;
-        color: #4a4a4a;
+
+    footer{
+        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin: 0;
     }
-    .about {
-        margin-top: 8vh;
-    }
+
 }
 
-@media (max-width: 1000px) {
-    .about {
-        flex-direction: column;
-        justify-content: flex-start;
+@media only screen and (max-width: 450px) {
+
+    #tribute-info {
+        height: 290vh;
     }
-    .about-content {
-        margin: auto;
+
+    #homedf {
+        height: 180vh;
     }
-    .img-div {
-        margin: auto;
+
+    #follow {
+        height: 16vh;
     }
-    #img {
-        margin-top: 0;
-    }
+
 }
